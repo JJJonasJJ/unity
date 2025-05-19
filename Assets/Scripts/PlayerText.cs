@@ -9,43 +9,34 @@ public class PlayerText : MonoBehaviour
     [SerializeField] TextManager textManager;
     [SerializeField] PieceFallDetector pfd;
 
-
     public void DisplayText()
     {
 
-        if (pfd.GameOver == true)
+        if (pfd.GameOver == true) //Om det är Game-Over
         {
-            textElement.text = "PLAYER " + (((textManager.RoundNumber + 1) % 2) + 1) + " WINS!";
-
+            textElement.text = "PLAYER " + (((textManager.RoundNumber + 1) % 2) + 1) + " WINS!"; //Då så vinner spelaren vars tur det inte är
         }
         else
         {
-            if (textManager.RoundNumber % 2 == 0)
+            if (textManager.RoundNumber % 2 == 0) //gör så att varranan runda går till varranan spelare
             {
                 textElement.text = "Player 1's Turn";
             }
-
             else
             {
                 textElement.text = "Player 2's Turn";
             }
-
         }
-
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         textElement.textStyle = TMP_Style.NormalStyle;
         textElement.fontStyle = FontStyles.Bold;
     }
 
-    // Update is called once per frame
     void Update()
-    {
-
-
+    { 
         DisplayText();
     }
 }

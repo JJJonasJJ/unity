@@ -10,9 +10,9 @@ public class TextManager : MonoBehaviour
 
     public int RoundNumber = 0;
 
-    public void DisplayInfo()
+    public void DisplayInfo() //Visar vilken runda som det är
     {
-        if (pfd.GameOver == true) { textElement.text = ""; }
+        if (pfd.GameOver == true) { textElement.text = ""; } //Gör så att man inte kan se rundnummeret om någon har vunnit
 
         else 
         { 
@@ -24,19 +24,8 @@ public class TextManager : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //Att sätta physicsuppdateringen i en text-script är kanske inte den bästa iden men det fungerar, så
-        
-        Time.timeScale = 10f;
-
         DisplayInfo();
     }
 }

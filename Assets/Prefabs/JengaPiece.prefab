@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textManager: {fileID: 0}
+  breakableBrick: {fileID: 8333881619984179214, guid: 8d867c185cbdeee4cb8183ea26ab9274, type: 3}
   clip: {fileID: 8300000, guid: c9d2d7de341a0c046992bad711db9330, type: 3}
 --- !u!82 &2190209848653679258
 AudioSource:
